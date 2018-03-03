@@ -5,8 +5,15 @@ build:
   - 'copy:build'
   - 'sass'
   - 'postcss'
-  - 'copy:reset'
+  - 'uglify:javascript'
+  - 'copy:stylesheets'
+  - 'copy:javascript'
   - 'minifyHtml'
+
+release:
+  - 'setup'
+  - 's3:dist'
+  - 'cloudfront:dist'
 
 server:
   - 'shell:start'

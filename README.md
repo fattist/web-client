@@ -32,3 +32,7 @@ grunt: https://gruntjs.com/
 
 - Responsive image srcset with unit DPI support
 - Pure CSS3 PNG masking, SVG support no longer needed for Firefox
+
+## Todo
+
+- Automate secrets management with Terraform

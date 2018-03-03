@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/secrets
 
 # production
 /application/dist
@@ -12,3 +13,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Terraform
+terraform/node_modules
+terraform/tf/.generated/*
+terraform/tf/.terraform/*
+terraform/tf/output/*
+terraform/tf/terraform.tfstate.backup
+terraform/secrets/*
+terraform/vault/**/vault-pass.txt

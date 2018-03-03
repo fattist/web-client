@@ -33,7 +33,7 @@ main {
     transition: all 1s;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 
-    &#icon {
+    &:nth-child(n+2) {
       align-self: flex-end;
       margin-left: .5em;
       filter: none;

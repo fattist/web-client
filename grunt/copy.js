@@ -21,7 +21,25 @@ module.exports = function(grunt) {
         }
       ]
     },
-    reset: {
+    javascript: {
+      src: 'application/dist/index.html',
+      dest: 'application/dist/index.html',
+      options: {
+        process: (ctx, path) => {
+          let tpl = ctx;
+
+          ['app', 'gtm', 'mixpanel'].forEach((source, idx) => {
+            const regexp = new RegExp(`({{${source})}}`);
+            const style = grunt.file.read(`${cwd}/application/dist/js/${source}.js`);
+
+            tpl = tpl.replace(regexp, style);
+          });
+
+          return tpl;
+        }
+      }
+    },
+    stylesheets: {
       src: 'application/dist/index.tpl',
       dest: 'application/dist/index.html',
       options: {
