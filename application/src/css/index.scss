@@ -1,0 +1,65 @@
+$background-main: rgb(0, 183, 255);
+$sheen-soft: rgba(241, 245, 246, 0);
+$sheen-hard: rgba(255, 255, 255, 0.55);
+$sheen-percentage-left: 85%;
+$sheen-percentage-mid: 92%;
+$sheen-percentage-right: 98%;
+
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(50% 0, rgba(255,255,255,.3), rgba(255,255,255,0), $background-main);
+  width: 100%;
+  min-height: 100%;
+  font: 1em 'Helvetica',sans-serif;
+  color: rgba(0,0,0,.6);
+}
+
+main {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  min-height: inherit;
+  padding: 0 10%;
+
+  a {
+    position: relative;
+    display: flex;
+    background-position: -618px 0;
+    transition: all 1s;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+
+    &#icon {
+      align-self: flex-end;
+      margin-left: .5em;
+      filter: none;
+
+      svg {
+        fill: rgba(0, 0, 0, 0.75);
+      }
+    }
+
+    &.loaded {
+      background-position: 128px 0;
+    }
+
+    &:hover, &:focus {
+      background-position: -618px 0;
+    }
+
+    &::after{
+      content:'';
+      position: absolute;
+      pointer-events: none;
+      top:0; left:0; right:0; bottom: 0;
+      background: radial-gradient(0 0, circle farthest-side, $sheen-soft $sheen-percentage-left, $sheen-hard $sheen-percentage-mid, $sheen-soft $sheen-percentage-right) no-repeat;
+      background: radial-gradient(circle farthest-side at 0 0, $sheen-soft $sheen-percentage-left, $sheen-hard $sheen-percentage-mid, $sheen-soft $sheen-percentage-right) no-repeat;
+      background-position: inherit;
+      mask: url('/images/logo.png') center;
+    }
+  }
+}

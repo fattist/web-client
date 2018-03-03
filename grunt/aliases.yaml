@@ -1,0 +1,16 @@
+default: []
+
+build:
+  - 'clean:build'
+  - 'copy:build'
+  - 'sass'
+  - 'postcss'
+  - 'copy:reset'
+  - 'minifyHtml'
+
+server:
+  - 'shell:start'
+
+start:
+  - 'build'
+  - 'server'
