@@ -9,9 +9,9 @@
 
     <title>Fattists build great and reliable software in Los Angeles</title>
 
-    <link rel="icon" type="image/png" href="/images/icon/16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/images/icon/32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/images/icon/96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/images/32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/96.png" sizes="96x96">
 
     <style media="screen" data-source="reset">{{reset}}</style>
     <style media="screen" data-source="index">{{index}}</style>
