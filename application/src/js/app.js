@@ -4,15 +4,29 @@
     return target;
   }
 
-  document.querySelector('#root').addEventListener('click', function(event) {
-    event.preventDefault();
-    event.stopPropagation();
+  window.fattist = {
+    menu: function(event) {
+      var body = document.querySelector('body');
+      var action = [].indexOf.call(body.classList, 'active') > -1 ? 'reset' : 'active';
+      var icon = action === 'reset' ? 'menu' : 'arrow_back';
 
-    var target = event.target.nodeName == 'A' ? event.target : parent(event.target, 'a');
+      document.querySelector('#hamburger').innerHTML = icon;
+      body.className = action;
+    },
+    track: function(event) {
+      event.preventDefault();
+      event.stopPropagation();
 
-    mixpanel.track(target.dataset.trigger);
-    window.location = target.getAttribute('href');
-  });
+      try {
+        var target = event.target.nodeName == 'A' ? event.target : parent(event.target, 'a');
+
+        mixpanel.track(target.dataset.trigger);
+        window.location = target.getAttribute('href');
+      } catch(error) {
+        console.warn(error);
+      }
+    }
+  };
 
   setTimeout(function() {
     document.querySelector('#logo').classList.add('loaded');
