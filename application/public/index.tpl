@@ -31,6 +31,9 @@
           <a href="https://linkedin.com/company/fattist/">about</a>
         </li>
         <li>
+          <a href="http://thoughts.fatt.ist">blog</a>
+        </li>
+        <li>
           <a href="https://github.com/fattist">code</a>
         </li>
         <li>
