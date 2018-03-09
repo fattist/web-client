@@ -21,10 +21,11 @@
         var target = event.target.nodeName == 'A' ? event.target : parent(event.target, 'a');
 
         mixpanel.track(target.dataset.trigger);
-        window.location = target.getAttribute('href');
       } catch(error) {
         console.warn(error);
       }
+
+      window.location = target.getAttribute('href');
     }
   };
 

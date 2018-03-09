@@ -28,16 +28,16 @@
       </button>
       <ul id="menu" onclick="fattist.track(event)">
         <li>
-          <a href="https://linkedin.com/company/fattist/">about</a>
+          <a href="https://linkedin.com/company/fattist/" data-trigger="linkedin">about</a>
         </li>
         <li>
-          <a href="http://thoughts.fatt.ist">blog</a>
+          <a href="http://thoughts.fatt.ist" data-trigger="blog">blog</a>
         </li>
         <li>
-          <a href="https://github.com/fattist">code</a>
+          <a href="https://github.com/fattist" data-trigger="github">code</a>
         </li>
         <li>
-          <a href="mailto:hello@fatt.ist?subject=Hello">contact</a>
+          <a href="mailto:hello@fatt.ist?subject=Hello" data-trigger="email">contact</a>
         </li>
       </ul>
     </nav>

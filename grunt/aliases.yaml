@@ -12,6 +12,7 @@ build:
 
 release:
   - 'setup'
+  - 'build'
   - 's3:dist'
   - 'cloudfront:dist'
 
